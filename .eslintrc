@@ -1,0 +1,54 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "settings": {
+    "import/resolver": {
+      "typescript": {}
+    }
+  },
+  "parserOptions": {
+    "project": "./tsconfig.json",
+    "sourceType": "module",
+    "tsconfigRootDir": "./"
+  },
+  "plugins": [
+    "@typescript-eslint/eslint-plugin"
+    // "import"
+  ],
+  "extends": [
+    "airbnb-base",
+    "airbnb-typescript/base",
+    "plugin:@typescript-eslint/recommended"
+    // "plugin:prettier/recommended",
+    // "plugin:import/recommended"
+  ],
+  "root": true,
+  "env": {
+    "node": true,
+    "jest": true
+  },
+  "ignorePatterns": [
+    ".eslintrc"
+  ],
+  "rules": {
+    "class-methods-use-this": "off",
+    "import/no-cycle": "off",
+    "import/prefer-default-export": "off",
+    "linebreak-style": "off",
+    "@typescript-eslint/lines-between-class-members": "off",
+    "max-len": "off",
+    "indent": [
+      2,
+      2,
+      {
+        "SwitchCase": 1
+      }
+    ],
+    "max-classes-per-file": "off",
+    "object-curly-newline": [
+      "error",
+      {
+        "multiline": true
+      }
+    ]
+  }
+}
